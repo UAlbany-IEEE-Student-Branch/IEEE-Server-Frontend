@@ -1,0 +1,218 @@
+  ::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+    background: #16111f;
+  }
+  ::-webkit-scrollbar-track {
+    background: none;        /* color of the tracking area */
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(227,141,36, 0.5);
+    border-radius: 20px;    
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(72, 52, 97, 0.5);   
+  }
+  
+  /* FORMATTING */
+  .text-center {
+      text-align: center;
+  }
+  .s-body {
+      background-color: #16111f;
+      color: white;
+      font-weight: 400;
+      height: 100%;
+      width: 100%;
+  }
+  .flex-container {
+      flex-direction: row;
+      display: flex;
+      width: 100%;
+  }
+  #members, .frosted-container {
+      background: rgba(39, 32, 51, 0.5);
+  }
+  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+      #members, .frosted-container, body::-webkit-scrollbar-thumb {
+          -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+      }
+  }
+  .offset {
+    margin-top: -76px;
+    height:auto;
+    overflow:visible;
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .container {
+    height: 100%;
+    position: relative;
+  }
+
+  /* HOME BUTTONS */
+  .home-buttons {
+      margin-left: auto;
+      margin-right: 0;
+      width: fit-content;
+      min-width: 100px
+  }
+  .btn-get-started,
+  .btn-get-started:active,
+  .btn-get-started:active:focus,
+  .btn-get-started:focus {
+      background-color: #ebba34;
+      color: #16111f;
+      box-shadow: none;
+      border-color: rgba(0, 0, 0, .125);
+      margin-top: 10px;
+  }
+  .btn-get-started:hover {
+      background-color: #bd8035;
+      color: white;
+      box-shadow: none;
+      border-color: rgba(0, 0, 0, .125);
+  }
+  .btn-parent-site {
+      margin-right: 10px;
+      margin-top: 10px;
+  }
+
+  /* HEADER */
+  .home-div {
+      height: 100vh;
+      min-height: 400px; /* EDIT TO FIX SCALING ISSUES */
+  }
+  .home-description-div,
+  .home-image-div {
+      flex-basis: 100%;
+  }
+  .title {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: bold;
+  }
+  .description {
+      margin: 0;
+  }
+  .logo-svg {
+      width: 100%;
+      pointer-events: none;
+  }
+
+  /* SECTIONS */
+  .disclaimer {
+      margin-top: 10px;
+      font-size: .8rem;
+      font-style: italic;
+  }
+  .small-icons .font-awesome, .small-icons .fab{
+    margin: 5vh;
+    font-size: 3rem;
+    color: #ebba34;
+  }
+  .large-icon {
+      font-size: 7rem;
+      color: #ebba34;
+      text-align:center;
+      width: 100%;
+  }
+  #members {
+    width: 100%;
+    height: fit-content;
+    min-height: 30vh;
+    padding: 10vh;
+  }
+  #members .title {
+    text-align: center;
+    color: #ebba34;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 1000px) {
+    #members {
+       padding-left: 0px;
+       padding-right: 0px;
+    }
+  }
+  #support {
+    background-color: #bd8035;
+    color: #16111f;
+  }
+  #about, #discord-integration, #portfolio, #support {
+    width: 100%;
+    height: fit-content;
+    padding: 10vh;
+  }
+  .questions {
+      margin-top: 20px;
+  }
+  #portfolio .text-box {
+    padding: 10px;
+    border-radius: 10px;
+    outline: 3px solid rgba(121, 84, 255, 0.1);
+  } 
+
+/* TEXT HOVERING ANIMATION */
+.text-container{
+   display: flex;
+   align-items:center;
+   justify-content:center;
+}
+.reveal{
+  backface-visibility: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* TOGGLE BACKGROUND GIF */
+.form-check-input:active, .form-check-input:focus {
+    box-shadow: none;
+    border-color: none;
+  }
+  .form-check-input:checked, .form-check-input:active:checked {
+      background-color: orange;
+      border-color:orange;
+      color:orange;
+      box-shadow: rgba(235, 186, 52, 0.25) 0px 54px 55px, rgba(235, 186, 52, 0.12) 0px -12px 30px, rgba(235, 186, 52, 0.12) 0px 4px 6px, rgba(235, 186, 52, 0.17) 0px 12px 13px, rgba(235, 186, 52, 0.09) 0px -3px 5px;
+  }
+  .form-check {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+
+  /* PARALLAX SCROLLING - ALSO SET BODY AND HTML TO 100% HEIGHT */
+  .animation-on, .animation-off {
+        /* Full height */
+        height: 100%;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+  }
+  .animation-on {
+      background-image: url('../../images/background.gif');
+  }
+  .animation-off {
+    background-image: url('../../images/dark-uni-bg.png');
+  }
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+    @media only screen and (max-device-width: 1366px) {
+        .animation-on, .animation-off{
+        background-attachment: scroll;
+        }
+    }

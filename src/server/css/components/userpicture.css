@@ -1,0 +1,39 @@
+.fadeio {
+    opacity: 1;
+    animation: fade 1s infinite linear;
+}
+@keyframes fade {
+  0%,100% { opacity: 0.3 }
+  50% { opacity: 1 }
+}
+
+.frame{
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    outline:2px solid white;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .frame img{
+      height: 100%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  }
+
+  .flex-container:hover > .frame {
+    outline: 2px solid #ebba34;
+  }
+
+  .flex-container:hover > .fa-caret-down {
+    color: #ebba34;
+  }
+
+  .fa-caret-down {
+    margin-left: 10px;
+  }
