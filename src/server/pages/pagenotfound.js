@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import '../css/pages/home.css'
 import '../css/pages/dashboard.css'
-import Navigation from '../../components/navigation'
+import Navigation from '../components/navigation'
 import pnf from '../images/404.gif'
 
 export default function PageNotFound() {
