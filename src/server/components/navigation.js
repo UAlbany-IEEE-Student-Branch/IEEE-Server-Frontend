@@ -29,13 +29,13 @@ export default function Navigation() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="/server/documentation">Documentation<span className="blink">_</span></a>
+                                <a className="nav-link" aria-current="page" href="/documentation">Documentation<span className="blink">_</span></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/server/#support">Support<span className="blink">_</span></a>
+                                <a className="nav-link" href="/#support">Support<span className="blink">_</span></a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/server/#about">About<span className="blink">_</span></a>
+                                <a className="nav-link" href="/#about">About<span className="blink">_</span></a>
                             </li>
                         </ul>
                         <form className="d-flex">
