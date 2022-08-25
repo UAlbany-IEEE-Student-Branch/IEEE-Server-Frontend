@@ -12,9 +12,9 @@ function App() {
     <div>
       <Router>
         <Routes>
-          <Route path="/server/*" element={<PageNotFound/>} />
-          <Route path="/server" element={<Home/>} />
-          <Route path="/server/dashboard" element={<Dashboard/>}/>
+          <Route path="/*" element={<PageNotFound/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/dashboard" element={<Dashboard/>}/>
         </Routes>
       </Router>
     </div>
