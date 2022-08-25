@@ -22,7 +22,7 @@ export default function Navigation() {
             <div id="App-navigation">
                 <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
-                        <a className="nav-link navbar-brand" href="/server"><img src={logo} className="App-logo" alt="logo" /></a>
+                        <a className="nav-link navbar-brand" href="/"><img src={logo} className="App-logo" alt="logo" /></a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <i className="fas fa-bars"/>
                         </button>
