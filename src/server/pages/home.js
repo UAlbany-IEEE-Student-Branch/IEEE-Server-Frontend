@@ -21,7 +21,7 @@ export default function Home() {
         }
     };
 
-    const {loginWithRedirect} = useAuth0();
+    const {user, isAuthenticated, isLoading, loginWithRedirect} = useAuth0();
 
     useEffect(()=> {
         if (window.localStorage.getItem("animation") === null)
@@ -75,8 +75,8 @@ export default function Home() {
                                         <p className="title">UAlbany IEEE Server</p>
                                         <p className="description">A free cloud hosting service for UAlbany IEEE club members.</p>
                                         <div className="home-buttons">
-                                            <button className="btn btn-outline-light btn-parent-site" type="submit" onClick={()=> loginWithRedirect()}>Parent Site</button>
-                                            <button className="btn btn-primary btn-get-started" type="submit" onClick={(e) => {e.preventDefault(); window.location.href = '/login'}}>Get Started</button>
+                                            <button className="btn btn-outline-light btn-parent-site" type="submit" onClick={(e) => {e.preventDefault(); window.location.href = 'https://ieeeualbany.org'}}>Parent Site</button>
+                                            <button className="btn btn-primary btn-get-started" type="submit" onClick={()=> loginWithRedirect()}>Get Started</button>
                                             <div className="form-check form-switch">
                                                 <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onChange={toggleAnimation}></input>
                                                 <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Disable animation</label>
