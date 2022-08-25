@@ -4,6 +4,7 @@ import Navigation from '../components/navigation';
 import '../css/pages/home.css'
 import logo_svg from '../images/ieeeualbany.svg'
 import MemberInfoCard from '../components/memberinfocard'
+import { useAuth0 } from '@auth0/auth0-react';
 
 export default function Home() {
     const [animation, setAnimation] = useState("animation-on");
@@ -19,6 +20,8 @@ export default function Home() {
             setAnimation("animation-on");
         }
     };
+
+    const {loginWithRedirect} = useAuth0();
 
     useEffect(()=> {
         if (window.localStorage.getItem("animation") === null)
@@ -72,7 +75,7 @@ export default function Home() {
                                         <p className="title">UAlbany IEEE Server</p>
                                         <p className="description">A free cloud hosting service for UAlbany IEEE club members.</p>
                                         <div className="home-buttons">
-                                            <button className="btn btn-outline-light btn-parent-site" type="submit" onClick={(e) => {e.preventDefault(); window.location.href = '/'}}>Parent Site</button>
+                                            <button className="btn btn-outline-light btn-parent-site" type="submit" onClick={()=> loginWithRedirect()}>Parent Site</button>
                                             <button className="btn btn-primary btn-get-started" type="submit" onClick={(e) => {e.preventDefault(); window.location.href = '/login'}}>Get Started</button>
                                             <div className="form-check form-switch">
                                                 <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onChange={toggleAnimation}></input>
